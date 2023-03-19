@@ -83,7 +83,6 @@ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot.InlineKeyboardButton{
 	"START": {
 		{
-			{Text: "☂ Aʙᴏᴜᴛ ☂", CallbackData: "edit(ABOUT)"},
 			{Text: "🧭 Help 🧭", CallbackData: "edit(HELP)"},
 			{Text: "🫂 Sᴜᴘᴘᴏʀᴛ 🫂", Url: "t.me/Jisin0"},
 		},
@@ -101,11 +100,14 @@ var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot
 		},
 	},
 	"HELP": {
-		{{Text: "Fɪʟᴛᴇʀ", CallbackData: "edit(MF)"},
+		       {{Text: "Fɪʟᴛᴇʀ", CallbackData: "edit(MF)"},
 			{Text: "Gʟᴏʙᴀʟ", CallbackData: "edit(GF)"},
 		}, {
-			{Text: "Cᴏɴɴᴇᴄᴛ", CallbackData: "edit(CONNECT)"}, {Text: "Broadcast", CallbackData: "edit(BROADCAST)"},
-		},
-		{{Text: "Bᴀᴄᴋ ➔", CallbackData: "edit(START)"}},
+			{Text: "Cᴏɴɴᴇᴄᴛ", CallbackData: "edit(CONNECT)"}, 
+                        {Text: "Broadcast", CallbackData: "edit(BROADCAST)"},
+		}, {
+                        {Text: "☂ Aʙᴏᴜᴛ ☂", CallbackData: "edit(ABOUT)"},
+                },
+		       {{Text: "Bᴀᴄᴋ ➔", CallbackData: "edit(START)"}},
 	},
 }
