@@ -13,15 +13,15 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
-            "value": ""
+            "value": "5927462664:AAFmsSkH2g_KCL24IWjGXq2B9s8jtgcsG6E"
         },
         "MONGODB_URI": {
             "description": "Your Mongo DB URL Obtained From mongodb.com",
-            "value": ""
+            "value": "mongodb+srv://Robot:Robot@cluster0.9gsoecy.mongodb.net/?retryWrites=true&w=majority"
         },
         "ADMINS": {
             "description": "A List Ids of bot admins seperated by spaces.",
-            "value": ""
+            "value": "5721673207"
         }
     },
     "buildpacks": [
