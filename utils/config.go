@@ -26,16 +26,16 @@ var TEXT map[string]string = map[string]string{
 <b><u>Nᴇᴡ ғɪʟᴛᴇʀ :</u></b>
 
 <u>Fᴏʀᴍᴀᴛ</u>
-<code>/filter "keyword" text</code> or
+<code>/filter</code> "keyword" text or
 Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 <u>Usᴀɢᴇ</u>
-<code>/filter "hi" hello</code>
+<code>/filter</code> "hi" hello
 [<code>hello</code>] -> Reply -> <code>/filter hi</code>
 
 <b><u>Sᴛᴏᴘ ғɪʟᴛᴇʀ :</u></b>
 
 <u>Fᴏʀᴍᴀᴛ</u>
-<code>/stop "keyword"</code>
+<code>/stop</code> "keyword"
 <u>Usᴀɢᴇ</u>
 <code>/stop "hi"</code>
 
@@ -49,7 +49,7 @@ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 <b><u>Sᴛᴏᴘ ғɪʟᴛᴇʀ :</u></b>
 
 <u>Fᴏʀᴍᴀᴛ</u>
-<code>/stop "keyword"</code>
+<code>/stop</code> "keyword"
 <u>Usᴀɢᴇ</u>
 <code>/stop "et"</code>
 
