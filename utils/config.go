@@ -9,15 +9,14 @@ var TEXT map[string]string = map[string]string{
 	"START": `
 <b>Hᴇʏ %v ɪᴍ %v ᴀɴ Aᴡᴇsᴏᴍᴇ Filter bot with global filter support</b>
 
-<i>I can save a custom reply for a word in any chat. Check my help menu for more details.</i>
+<b>I can save a custom reply for a word in any chat. Check my /help menu for more details.</b>
 	`,
 	"ABOUT": `
-<b>Լαɳցᥙαցҽ</b> : <a href='https://go.dev'>𝗚𝗢</a>
-<b>Ƒɾα𝓶ҽɯσƙ</b> : <a href='github.com/PaulSonOfLars/gotgbot'>𝗴𝗼𝘁𝗴𝗯𝗼𝘁</a>
-<b>Sҽɾʋҽɾ</b> : <a href='heroku.com'>𝗛𝗲𝗿𝗼𝗸𝘂</a>
-<b>Ɗα𝜏αẞαടҽ</b> : <a href='mongodb.org'>𝗠𝗼𝗻𝗴𝗼𝗗𝗕</a>
-<b>Ɗҽʋҽɬσρҽɾ</b> : <a href='t.me/jisin0'>𝗝𝗶𝘀𝗶𝗻𝟬</a>
-<b>Sᥙρρσɾ𝜏</b> : <a href='t.me/jisin_hub'>𝗛𝗲𝗿𝗲</a>
+Creator: <a href='http://t.me/iamLegend789bot'>༺Leͥgeͣnͫd༻</a>
+Library: <a href='https://docs.pyrogram.org'>Pyrogram 1.4.16</a>
+Updates: <a href='https://t.me/AKprojects4'>AK projects</a>
+Server: <a href='https://www.digitalocean.com'>Do</a>
+Build Status: v1.0.3 [stable]
 	`,
 
 	"MF": `
@@ -61,7 +60,7 @@ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 
 <b><u>Cᴏɴɴᴇᴄᴛ :</u></b>
 -> Fɪʀsᴛ ɢᴇᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ɪᴅ ʙʏ sᴇɴᴅɪɴɢ /id ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ
--> <code>/connect [group_id]</code>
+-> <code>/connect</code> [group_id]
 
 <b><u>Dɪsᴄᴏɴɴᴇᴄᴛ :</u></b>
 <code>/disconnect</code>
@@ -71,8 +70,12 @@ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 <b>The broadcast feature allows bot admins to broadcast a message to all of the bot's users.</b>
 
 <I>Broadcasts are of two types :</i>
- ~ Full Broadcast - Broadcast to all of the bot users <code>/broadcast</code>
- ~ Concast - Broadcast to only users who are connected to a chat <code>/concast</code>
+ ~ Full Broadcast - Broadcast to all of the bot users 
+
+   <code>/broadcast</code>
+ ~ Concast - Broadcast to only users who are connected to a chat 
+
+   <code>/concast</code>
 `,
 
 	"HELP": `
@@ -88,27 +91,27 @@ var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot
 	},
 	"ABOUT": {
 		{
-			{Text: "𝚂𝚃𝙰𝚃𝚂", CallbackData: "stats"},
-                        {Text: "🫂 Sᴜᴘᴘᴏʀᴛ 🫂", Url: "t.me/Jisin0"},
+			{Text: "Stats", CallbackData: "stats"},
+                        {Text: "🫂 Support 🫂", Url: "t.me/iamLegend789bot"},
                 }, {
-                        {Text: "𝙷𝙾𝙼𝙴", CallbackData: "edit(HELP)"},
+                        {Text: "Home", CallbackData: "edit(HELP)"},
 		},
 	},
 	"STATS": {
 		{
-			{Text: "𝙱𝙰𝙲𝙺", CallbackData: "edit(ABOUT)"},
-			{Text: "𝚁𝙴𝙵𝚁𝙴𝚂𝙷", CallbackData: "stats"},
+			{Text: "Back", CallbackData: "edit(ABOUT)"},
+			{Text: "Refresh", CallbackData: "stats"},
 		},
 	},
 	"HELP": {
-		       {{Text: "Fɪʟᴛᴇʀ", CallbackData: "edit(MF)"},
-			{Text: "Gʟᴏʙᴀʟ", CallbackData: "edit(GF)"},
+		       {{Text: "Filter", CallbackData: "edit(MF)"},
+			{Text: "Global", CallbackData: "edit(GF)"},
 		}, {
-			{Text: "Cᴏɴɴᴇᴄᴛ", CallbackData: "edit(CONNECT)"}, 
+			{Text: "Connect", CallbackData: "edit(CONNECT)"}, 
                         {Text: "Broadcast", CallbackData: "edit(BROADCAST)"},
 		}, {
-                        {Text: "☂ Aʙᴏᴜᴛ ☂", CallbackData: "edit(ABOUT)"},
+                        {Text: "About", CallbackData: "edit(ABOUT)"},
                 },
-		       {{Text: "Bᴀᴄᴋ ➔", CallbackData: "edit(START)"}},
+		       {{Text: "Back", CallbackData: "edit(START)"}},
 	},
 }
