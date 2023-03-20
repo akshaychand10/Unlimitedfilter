@@ -20,26 +20,21 @@ Build Status: v1.0.3 [stable]
 	`,
 
 	"MF": `
-<b>Mᴀɴᴜᴀʟ ғɪʟᴛᴇʀs ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ sᴀᴠᴇ ᴄᴜsᴛᴏᴍ ғɪʟᴛᴇʀs ᴏᴛʜᴇʀ ᴛʜᴀɴ ᴛʜᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴄ ᴏɴᴇs. Fɪʟᴛᴇʀs ᴄᴀɴ ʙᴇ ᴏғ ᴛᴇxᴛ/ᴘʜᴏᴛᴏ/ᴅᴏᴄᴜᴍᴇɴᴛ/ᴀᴜᴅɪᴏ/ᴀɴɪᴍᴀᴛɪᴏɴ/ᴠɪᴅᴇᴏ .</b>
+Filters:
+Filter is the feature were users can set automated replies for a particular keyword and the bot will respond whenever a keyword is found the message
 
-<b><u>Nᴇᴡ ғɪʟᴛᴇʀ :</u></b>
+NOTE:
+1. bot should have admin privillage in order to reply filters in a chat.
+2. only admins can add filters in a chat.
+3. filters does support all the telegram markdowns, medias 
+5. there are some easter eggs, try to find it out.
 
-<u>Fᴏʀᴍᴀᴛ</u>
-<code>/filter</code> "keyword" text or
-Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
-<u>Usᴀɢᴇ</u>
-<code>/filter</code> "hi" hello
-[<code>hello</code>] -> Reply -> <code>/filter hi</code>
+Commands and Usage:
+/filter   - add a filter
 
-<b><u>Sᴛᴏᴘ ғɪʟᴛᴇʀ :</u></b>
+/filters - list all the filters of a chat
 
-<u>Fᴏʀᴍᴀᴛ</u>
-<code>/stop</code> "keyword"
-<u>Usᴀɢᴇ</u>
-<code>/stop "hi"</code>
-
-<b><u>Vɪᴇᴡ ғɪʟᴛᴇʀs :</u></b>
-<code>/filters</code>
+/stop  - delete a specific filter (separate keywords with spaces for deleting multiple filters at a time)
 `,
 
 	"GF": `
@@ -56,14 +51,19 @@ Rᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ -><code>/filter "keyword"</code>
 /gfilters
 `,
 	"CONNECT": `
-<b>Cᴏɴɴᴇᴄᴛɪᴏɴs ᴀʟʟᴏᴡ ʏᴏᴜ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ʜᴇʀᴇ ɪɴ ᴘᴍ ɪɴsᴛᴇᴀᴅ ᴏғ sᴇɴᴅɪɴɢ ᴛʜᴏsᴇ ᴄᴏᴍᴍᴀɴᴅs ᴘᴜʙʟɪᴄʟʏ ɪɴ ᴛʜᴇ ɢʀᴏᴜᴘ ⠘⁾</b>
+Connections:
+Used to connect bot to PM which let will you to execute both normal filter related commands and some other sensitive commands right from the PM that will
+reflect in the group which helps you to keep the filter additions and other stuffs private and helps to prevent flooding.
 
-<b><u>Cᴏɴɴᴇᴄᴛ :</u></b>
--> Fɪʀsᴛ ɢᴇᴛ ʏᴏᴜʀ ɢʀᴏᴜᴘ's ɪᴅ ʙʏ sᴇɴᴅɪɴɢ /id ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ
--> <code>/connect</code> [group_id]
+NOTE:
+1. Only admins can add a connection.
+2. In a chat you can simply use the /connect for starting a connection and in PM you must specify chat id right after the command.
 
-<b><u>Dɪsᴄᴏɴɴᴇᴄᴛ :</u></b>
-<code>/disconnect</code>
+Commands and Usage:
+
+/connect <chat id> - connect a particular chat to your PM
+
+/disconnect <chat id> - disconnect from a chat
 `,
 
 	"BROADCAST": `
@@ -91,9 +91,6 @@ var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot
 	},
 	"ABOUT": {
 		{
-			{Text: "Stats", CallbackData: "stats"},
-                        {Text: "🫂 Support 🫂", Url: "t.me/iamLegend789bot"},
-                }, {
                         {Text: "Home", CallbackData: "edit(HELP)"},
 		},
 	},
@@ -105,12 +102,13 @@ var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot
 	},
 	"HELP": {
 		       {{Text: "Filter", CallbackData: "edit(MF)"},
-			{Text: "Global", CallbackData: "edit(GF)"},
+			{Text: "About", CallbackData: "edit(ABOUT)"},
 		}, {
-			{Text: "Connect", CallbackData: "edit(CONNECT)"}, 
+			{Text: "Connection", CallbackData: "edit(CONNECT)"}, 
                         {Text: "Broadcast", CallbackData: "edit(BROADCAST)"},
-		}, {
-                        {Text: "About", CallbackData: "edit(ABOUT)"},
+                }, {
+                        {Text: "Update Channel", Url: "t.me/AKprojects4"},
+                        {Text: "🫂 Support 🫂", Url: "t.me/AK_projects_Bot"},
                 },
 		       {{Text: "Back", CallbackData: "edit(START)"}},
 	},
