@@ -38,17 +38,19 @@ Commands and Usage:
 `,
 
 	"GF": `
-<b>Gʟᴏʙᴀʟ ғɪʟᴛᴇʀs ᴀʀᴇ ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀs sᴀᴠᴇᴅ ʙʏ ʙᴏᴛ ᴀᴅᴍɪɴs ᴛʜᴀᴛ ᴡᴏʀᴋ ɪɴ ᴀʟʟ ᴄʜᴀᴛs. Tʜᴇʏ ᴘʀᴏᴠɪᴅᴇ ʟᴀᴛᴇsᴛ ᴍᴏᴠɪᴇs ɪɴ ᴀ ᴇᴀsʏ ᴛᴏ ᴜsᴇ ғᴏʀᴍᴀᴛ.</b>
+Connections:
+Used to connect bot to PM which let will you to execute both normal filter related commands and some other sensitive commands right from the PM that will
+reflect in the group which helps you to keep the filter additions and other stuffs private and helps to prevent flooding.
 
-<b><u>Sᴛᴏᴘ ғɪʟᴛᴇʀ :</u></b>
+NOTE:
+1. Only admins can add a connection.
+2. In a chat you can simply use the /connect for starting a connection and in PM you must specify chat id right after the command.
 
-<u>Fᴏʀᴍᴀᴛ</u>
-<code>/stop</code> "keyword"
-<u>Usᴀɢᴇ</u>
-<code>/stop "et"</code>
+Commands and Usage:
 
-<b><u>Vɪᴇᴡ ғɪʟᴛᴇʀs :</u></b>
-/gfilters
+/connect <chat id> - connect a particular chat to your PM
+
+/disconnect <chat id> - disconnect from a chat
 `,
 	"CONNECT": `
 Connections:
@@ -104,7 +106,7 @@ var BUTTONS map[string][][]gotgbot.InlineKeyboardButton = map[string][][]gotgbot
 		       {{Text: "Filter", CallbackData: "edit(MF)"},
 			{Text: "About", CallbackData: "edit(ABOUT)"},
 		}, {
-			{Text: "Connection", CallbackData: "edit(CONNECT)"}, 
+			{Text: "Connection", CallbackData: "edit(GF)"}, 
                         {Text: "Broadcast", CallbackData: "edit(BROADCAST)"},
                 }, {
                         {Text: "Update Channel", Url: "t.me/AKprojects4"},
